@@ -8,7 +8,7 @@ Après téléchargement, vous mettez le fichier neo4j.dump (NE PAS MODIFIER LE N
 # Dependencies
 Nous énumérons ci-dessous toutes les dépendances nécessaires.
 
-python: 
+Python: 
 -version 3.10.9 or more
 
 Java:
