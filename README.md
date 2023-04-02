@@ -6,7 +6,9 @@ Le jeu de données Enterobacter est disponible [ici](https://filesender.renater.
 
 # Dependencies
 We list all required dependencies below. 
+
 python: 
+-version 3.10.9 or more
 
 Java:
 - version 17
