@@ -6,21 +6,19 @@ Le jeu de données Enterobacter est disponible [ici](https://filesender.renater.
 
 # Dependencies
 We list all required dependencies below. 
+python: 
 
-Use pip to install:
-- dict2graph==2.0.0
-- graphio==0.4.0
+Jdk: 17
 
-Use conda to install:
-- ppanggolin==1.2.74
-- pyhmmer==0.6.3
-- py2neo==2021.2.3
-- rgi==6.0.1
-- genome_updater==0.5.1
+Gephi: 
+- version 0.10.1
+- runtime option "-J-Xss100m"  
 
 Neo4j:
-- Add local DBMS with a Neo4j version of 4.4.11
-- APOC 4.4.0.10 or more
+- Add local DBMS with a Neo4j version of 5.5.0
+- APOC core 5.5.0
+- APOC extended 5.5.0
+- GDS 2.3.1
 - Optional : Neo4J Desktop 1.5.0
 
 # Contributeurs
