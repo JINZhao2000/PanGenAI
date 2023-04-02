@@ -1,0 +1,40 @@
+#Create the graph with all the nodes of gene families and edges 
+
+CALL gds.graph.project.cypher(
+  "Family",
+  "MATCH (n:Family) RETURN id(n) AS id",
+  "MATCH (n:Family)-[r:NEIGHBOR|IS_SIMILAR]-(m:Family) WITH n, m, r WHERE r.identity IS NOT NULL OR r.weight IS NOT NULL RETURN id(n) AS source, id(m) AS target"
+) YIELD
+  graphName,
+  nodeQuery,
+  nodeCount,
+  relationshipQuery,
+  relationshipCount
+
+#Cluster with labelPropagation algorithm and visualize with Gephi
+  
+CALL gds.labelPropagation.stream('Family')
+YIELD nodeId, communityId
+with collect(nodeId) as nodeIds, communityId
+match (n:Family)
+where id(n) in nodeIds
+with collect(n) as ns, communityId
+match path=(f1:Family)-[:IS_SIMILAR|NEIGHBOR]-(f2:Family)
+where f1 in ns and f2 in ns
+call apoc.gephi.add(null,'workspace1', path, '',['annotation','pgname','pname', 'mname', 'communityId'])
+yield nodes, relationships, time
+return nodes, relationships, time
+
+#Cluster with louvian algorithm and visualize with Gephi
+  
+CALL gds.louvian.stream('Family')
+YIELD nodeId, communityId
+with collect(nodeId) as nodeIds, communityId
+match (n:Family)
+where id(n) in nodeIds
+with collect(n) as ns, communityId
+match path=(f1:Family)-[:IS_SIMILAR|NEIGHBOR]-(f2:Family)
+where f1 in ns and f2 in ns
+call apoc.gephi.add(null,'workspace1', path, '',['annotation','pgname','pname', 'mname', 'communityId'])
+yield nodes, relationships, time
+return nodes, relationships, time
