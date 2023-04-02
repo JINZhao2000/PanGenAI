@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Neo4jTest {
-    private Driver driver = GraphDatabase.driver("bolt://localhost:7687", AuthTokens.basic("neo4j", "PanGenAI2023"));
+    private Driver driver = GraphDatabase.driver("bolt://localhost:7687", AuthTokens.basic("neo4j", ""));
     @Test
     public void prepare() {
         try (Session session = driver.session()) {
