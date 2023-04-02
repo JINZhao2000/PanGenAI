@@ -29,8 +29,8 @@ Neo4j:
 * Stefania Dumbrava, SAMOVAR/Inst. Polytechnique de Paris, ENSIIE
 * Alexandra Calteau, Genoscope/LABGeM - CEA, CNRS, Paris Saclay University
 * Guillaume Gautreau, MetaGenoPolis, Université Paris-Saclay, INRAE, MGP
-* Zhao JIN ,ENSIIE 
-* Nadezhda ZHUKOVA ,Paris Cité
-* Khaoula HARCHANE ,ENSIIE
+* Zhao JIN, ENSIIE 
+* Nadezhda ZHUKOVA, Université Paris Cité
+* Khaoula HARCHANE, ENSIIE
 
 
