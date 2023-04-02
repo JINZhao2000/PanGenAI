@@ -3,6 +3,7 @@ Le PanGenAI est un projet qui vise à utiliser des méthodes statistiques pour a
 
 # Dataset 
 Le jeu de données Enterobacter est disponible [ici](https://filesender.renater.fr/download.php?token=5dcae9f1-2cac-48c4-85c2-99d5305355ee&files_ids=23532702)
+Après téléchargement, vous mettez le fichier neo4j.dump (NE PAS MODIFIER LE NOM DU FICHIER) sous le répertoire $NEO4j_HOME/import
 
 # Dependencies
 Nous énumérons ci-dessous toutes les dépendances nécessaires.
