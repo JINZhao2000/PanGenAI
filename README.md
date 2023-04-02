@@ -5,7 +5,7 @@ Le PanGenAI est un projet qui vise à utiliser des méthodes statistiques pour a
 Le jeu de données Enterobacter est disponible [ici](https://filesender.renater.fr/download.php?token=5dcae9f1-2cac-48c4-85c2-99d5305355ee&files_ids=23532702)
 
 # Dependencies
-We list all required dependencies below. 
+Nous énumérons ci-dessous toutes les dépendances nécessaires.
 
 python: 
 -version 3.10.9 or more
