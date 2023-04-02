@@ -3,7 +3,7 @@
 CALL gds.graph.project.cypher(
   "Family",
   "MATCH (n:Family) RETURN id(n) AS id",
-  "MATCH (n:Family)-[r:NEIGHBOR|IS_SIMILAR]-(m:Family) WITH n, m, r WHERE r.identity IS NOT NULL OR r.weight IS NOT NULL RETURN id(n) AS source, id(m) AS target"
+  "MATCH (n:Family)-[r:NEIGHBOR|IS_SIMILAR]-(m:Family) WITH n, m, r RETURN id(n) AS source, id(m) AS target"
 ) YIELD
   graphName,
   nodeQuery,
